@@ -21,4 +21,4 @@ Front camera | 32MP in-display
 
 ## Device picture
 
-![Xiaomi 12](https://cdn.cnbj1.fds.api.mi-img.com/product-images/xiaomi13pro5r9luc/specs/4025.png "Xiaomi 13Pro")
+![Xiaomi 13Pro](https://cdn.cnbj1.fds.api.mi-img.com/product-images/xiaomi13pro5r9luc/specs/4025.png "Xiaomi 13Pro")
