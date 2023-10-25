@@ -49,6 +49,7 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Recovery
 PRODUCT_PACKAGES += \
+    fastbootd \
     init.recovery.qcom.rc
 
 # Soong
