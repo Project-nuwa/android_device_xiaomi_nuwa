@@ -37,3 +37,24 @@ PRODUCT_SOONG_NAMESPACES += \
 BOARD_API_LEVEL := 33
 BOARD_SHIPPING_API_LEVEL := 31
 PRODUCT_SHIPPING_API_LEVEL := 31
+
+# Boot control
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.2-impl-qti \
+    android.hardware.boot@1.2-impl-qti.recovery \
+    android.hardware.boot@1.2-service
+
+PRODUCT_PACKAGES_DEBUG += \
+    bootctl
+
+# Recovery
+PRODUCT_PACKAGES += \
+    init.recovery.qcom.rc
+
+# Soong
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH)
+
+# Partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+PRODUCT_BUILD_SUPER_PARTITION := false

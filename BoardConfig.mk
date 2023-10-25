@@ -6,6 +6,25 @@
 
 DEVICE_PATH := device/xiaomi/nuwa
 
+# A/B
+AB_OTA_UPDATER := true
+
+AB_OTA_PARTITIONS += \
+    boot \
+    dtbo \
+    init_boot \
+    odm \
+    product \
+    recovery \
+    system \
+    system_ext \
+    system_dlkm \
+    vbmeta \
+    vbmeta_system \
+    vendor \
+    vendor_boot \
+    vendor_dlkm
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a-branchprot
@@ -20,6 +39,22 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a75
+
+# AVB
+BOARD_AVB_ENABLE := true
+BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
+BOARD_MOVE_GSI_AVB_KEYS_TO_VENDOR_BOOT := true
+
+BOARD_AVB_RECOVERY_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
+BOARD_AVB_RECOVERY_ALGORITHM := SHA256_RSA2048
+BOARD_AVB_RECOVERY_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
+BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
+
+BOARD_AVB_VBMETA_SYSTEM := system system_ext system_dlkm product
+BOARD_AVB_VBMETA_SYSTEM_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
+BOARD_AVB_VBMETA_SYSTEM_ALGORITHM := SHA256_RSA2048
+BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
+BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 2
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := kalama
@@ -116,3 +151,16 @@ TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 TARGET_BOARD_PLATFORM := kalama
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno740
 BOARD_USES_QCOM_HARDWARE := true
+
+# Recovery
+SOONG_CONFIG_NAMESPACES += ufsbsg
+SOONG_CONFIG_ufsbsg += ufsframework
+SOONG_CONFIG_ufsbsg_ufsframework := bsg
+
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
+TARGET_NO_RECOVERY := false
+BOARD_HAS_LARGE_FILESYSTEM := true
+BOARD_USES_RECOVERY_AS_BOOT := false
+BOARD_EXCLUDE_KERNEL_FROM_RECOVERY_IMAGE := true
+BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := false
