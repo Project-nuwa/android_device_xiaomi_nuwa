@@ -131,6 +131,9 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(DEVICE_PATH)/prebuilts/modules/vendor_boot/,$(TARGET_COPY_OUT_VENDOR_RAMDISK)/lib/modules) \
     $(call find-copy-subdir-files,*,$(DEVICE_PATH)/prebuilts/modules/system_dlkm/,$(TARGET_COPY_OUT_SYSTEM_DLKM)/lib/modules/5.15.78)
 
+# Sepolicy
+include device/qcom/sepolicy_vndr/SEPolicy.mk
+
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
