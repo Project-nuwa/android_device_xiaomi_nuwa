@@ -4101,7 +4101,6 @@ vendor/etc/vintf/manifest/vendor.xiaomi.hardware.misys@4.0.xml
 vendor/etc/vintf/manifest/vendor.xiaomi.hardware.quickcamera@1.0-service.xml
 vendor/etc/vintf/manifest/vendor.xiaomi.hardware.vcamera.provider.xml
 vendor/etc/vintf/manifest/vendor.xiaomi.modem.qms.xml
-vendor/etc/vintf/manifest_kalama.xml
 vendor/etc/1-SN1X0_SPC.txt
 vendor/etc/IPACM_Filter_cfg.xml
 vendor/etc/ITVDD.txt
@@ -4111,11 +4110,9 @@ vendor/etc/audio_diag.cfg
 vendor/etc/batching.conf
 vendor/etc/card-defs.xml
 vendor/etc/charger_diag.cfg
-vendor/etc/charger_fw_fstab.qti
 vendor/etc/clstc_config_library.xml
 vendor/etc/df_default.xml
 vendor/etc/excluded-input-devices.xml
-vendor/etc/fstab.qcom
 vendor/etc/ftm_test_config
 vendor/etc/ftm_test_config_kalama-grd-snd-card
 vendor/etc/ftm_test_config_kalama-qrd-snd-card
