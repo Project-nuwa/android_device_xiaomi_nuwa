@@ -2211,7 +2211,6 @@ vendor/etc/perf/commonsysnodesconfigs.xml
 vendor/etc/perf/perfboostsconfig.xml
 vendor/etc/perf/perfboostselection.xml
 vendor/etc/perf/perfconfigstore.xml
-vendor/etc/perf/powerhint.xml
 vendor/etc/perf/targetavcsysnodesconfigs.xml
 vendor/etc/perf/targetconfig.xml
 vendor/etc/perf/targetresourceconfigs.xml
@@ -2221,7 +2220,6 @@ vendor/etc/perf/testtargetresourceconfigs.xml
 vendor/etc/perf/thermal-boost.conf
 vendor/etc/perf/thermalbreakboostconfig.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.perf.xml
-vendor/etc/powerhint.xml
 vendor/lib/libperfconfig.so
 vendor/lib/libperfgluelayer.so
 vendor/lib/libqti-perfd-client.so
@@ -2250,12 +2248,6 @@ vendor/lib/vendor.qti.hardware.iop@2.0.so
 vendor/lib64/libqti-iopd-client.so
 vendor/lib64/vendor.qti.hardware.iop@1.0.so
 vendor/lib64/vendor.qti.hardware.iop@2.0.so
-
-# Power
-vendor/bin/hw/android.hardware.power-service
-vendor/etc/init/android.hardware.power-service.rc
-vendor/lib/hw/power.default.so
-vendor/lib64/hw/power.default.so
 
 # QCC
 system_ext/etc/init/vendor.qti.hardware.qccsyshal@1.2-service.rc
@@ -4082,7 +4074,6 @@ vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.miface.xml
 vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.swap.xml
 vendor/etc/vintf/manifest/memtrack_qti.xml
 vendor/etc/vintf/manifest/mi-misight.xml
-vendor/etc/vintf/manifest/power.xml
 vendor/etc/vintf/manifest/qcrilhook-saidl.xml
 vendor/etc/vintf/manifest/qms-saidl.xml
 vendor/etc/vintf/manifest/qtiradio-saidl.xml
