@@ -43,6 +43,10 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_PACKAGES += \
     android.hardware.atrace@1.0-service
 
+# ANT+
+PRODUCT_PACKAGES += \
+    com.dsi.ant@1.0.vendor
+    
 # API
 BOARD_API_LEVEL := 33
 BOARD_SHIPPING_API_LEVEL := 31
@@ -178,7 +182,6 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 # Telephony
-# Telephony
 PRODUCT_PACKAGES += \
     extphonelib \
     extphonelib-product \
@@ -195,7 +198,7 @@ PRODUCT_PACKAGES += \
     qti_telephony_utils.xml \
     qti_telephony_utils_prd.xml \
     telephony-ext
-    
+
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
